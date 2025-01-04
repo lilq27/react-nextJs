@@ -4,6 +4,8 @@ import MealsGrid from '../components/meals/meals-grid';
 import { getMeals } from '../../lib/meals';
 import { Suspense } from 'react';
 
+//로컬 환경에서 돌릴 때 => npm run dev
+//배포 환경에서 돌릴 때 => npm run build => npm start
 async function Meals() {
     const meals =  await getMeals();
 
