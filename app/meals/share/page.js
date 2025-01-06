@@ -9,6 +9,7 @@ import MealsFormSubmit from '../meals-form-submit';
 import { useActionState } from 'react';
 
 export default function ShareMealPage() {
+    
     const [state, formAction] = useActionState(shareMeal, {message: null});
 
     return (
