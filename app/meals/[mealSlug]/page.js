@@ -3,6 +3,19 @@ import classes from './page.module.css';
 import { getMeal } from '@/lib/meals';
 import { notFound } from 'next/navigation';
 
+export async function generateMetadata({ params }) { // 동적 메타데이터
+    const meal = await getMeal(params.mealSlug);
+
+    if(!meal) {
+        notFound();
+    }
+
+    return {
+        title: meal.title,
+        description: meal.summary,
+    };
+}
+
 export default async function MealDetailsPage({ params }) {
     console.log("MealDetailsPage", params);
 

@@ -4,6 +4,11 @@ import MealsGrid from '../components/meals/meals-grid';
 import { getMeals } from '../../lib/meals';
 import { Suspense } from 'react';
 
+export const metadata = { //정적 메타데이터
+    title: 'All Meals',
+    description: 'Browse the delicious meals shared by our vibrant community.',
+};
+
 //로컬 환경에서 돌릴 때 => npm run dev
 //배포 환경에서 돌릴 때 => npm run build => npm start
 async function Meals() {
